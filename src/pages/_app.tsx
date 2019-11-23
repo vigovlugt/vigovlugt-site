@@ -2,6 +2,7 @@ import React from "react";
 import App from "next/app";
 import Layout from "../components/layout/Layout";
 import { AppContext } from "../contexts/AppContext";
+import Head from "next/head";
 
 class MyApp extends App<{}, {}, { nameColor: string }> {
   // Only uncomment this method if you have blocking data requirements for
@@ -36,6 +37,20 @@ class MyApp extends App<{}, {}, { nameColor: string }> {
           setNameColor: this.setNameColor
         }}
       >
+        <Head>
+          {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-98097708-2"
+          ></script>
+          <script>
+            {`window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-98097708-2');`}
+          </script>
+        </Head>
         <Layout>
           <Component {...pageProps} />
         </Layout>
