@@ -15,12 +15,12 @@ const Header = () => (
           </Link>
         </Nav>
         <Nav className="ml-auto">
-          <Link href={"/skills"}>
+          {/* <Link href={"/skills"}>
             <a className="nav-link">Skills</a>
           </Link>
           <Link href={"/portfolio"}>
             <a className="nav-link">Portfolio</a>
-          </Link>
+          </Link> */}
           <Link href={"//github.com/vigovlugt"}>
             <a className="nav-link">
               Github
